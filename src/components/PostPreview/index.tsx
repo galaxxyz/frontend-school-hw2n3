@@ -1,0 +1,24 @@
+import { Container } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
+import styles from './PostPreview.module.css';
+import { PostPreviewProps } from '../../domain/post';
+import abbreviateNumber from '../../helpers/abbreviateNumber';
+
+export function PostPreview({ preview }: { preview: PostPreviewProps }) {
+  return (
+    <Container className="my-3 text-center">
+      <img className={styles.video} alt="" src={preview.dynamicCover} />
+      <div>
+        <FontAwesomeIcon
+          icon={faEye}
+          size="xs"
+          className={styles.iconPlayCount}
+        />
+        <p className={styles.iconPlayCount}>
+          {` ${abbreviateNumber(preview.playCount)}`}
+        </p>
+      </div>
+    </Container>
+  );
+}
