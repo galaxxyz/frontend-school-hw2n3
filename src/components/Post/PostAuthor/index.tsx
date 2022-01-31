@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { PostAuthorProps } from '../../../domain/post';
 import styles from './PostAuthor.module.css';
 
-export default function PostAuthor({ author }: { author: PostAuthorProps }) {
+export function PostAuthor({ author }: { author: PostAuthorProps }) {
   return (
     <Container className="px-0 pb-3">
       <Link className={styles.authorLink} to={`/tiktuk/${author.uniqueId}`}>

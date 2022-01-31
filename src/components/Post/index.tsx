@@ -1,8 +1,8 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from './Post.module.css';
 import { PostProps } from '../../domain/post';
-import PostAuthor from './PostAuthor';
-import PostStats from './PostSats';
+import { PostAuthor } from './PostAuthor';
+import { PostStats } from './PostStats';
 
 export function Post({ post }: { post: PostProps }) {
   return (
@@ -18,7 +18,11 @@ export function Post({ post }: { post: PostProps }) {
             autoPlay
             muted
           >
-            <source src={post.video.playAddr} type="Video/mp4" />
+            <source
+              data-testid="videoSource"
+              src={post.video.playAddr}
+              type="Video/mp4"
+            />
           </video>
         </Col>
         <Col sm={4} xs={12} className="py-3">

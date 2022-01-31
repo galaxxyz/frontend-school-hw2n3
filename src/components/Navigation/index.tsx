@@ -6,7 +6,7 @@ export function Navigation() {
   return (
     <Navbar bg="dark" variant="dark" fixed="top">
       <Container>
-        <Navbar.Brand href="#">
+        <Navbar.Brand as={Link} to="/tiktuk/">
           <img
             src={logo}
             alt="tiktuk logo"

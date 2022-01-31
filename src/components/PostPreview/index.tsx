@@ -9,7 +9,7 @@ export function PostPreview({ preview }: { preview: PostPreviewProps }) {
   return (
     <Container className="my-3 text-center">
       <img className={styles.video} alt="" src={preview.dynamicCover} />
-      <div>
+      <div data-testid="previewPlayCount">
         <FontAwesomeIcon
           icon={faEye}
           size="xs"

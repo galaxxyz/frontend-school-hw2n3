@@ -34,7 +34,10 @@ export function UserInfo({ info }: { info: UserProps }) {
             {`@${info.user.uniqueId}`}
           </div>
           {info.user.signature ? (
-            <div className={`${styles.userSignature} py-3 px-4`}>
+            <div
+              data-testid="signature"
+              className={`${styles.userSignature} py-3 px-4`}
+            >
               {info.user.signature}
             </div>
           ) : (
@@ -47,15 +50,19 @@ export function UserInfo({ info }: { info: UserProps }) {
         <Col sm="auto" xs="auto">
           <Container>
             <Row>
-              <Col xs={4} className="text-center px-4">
+              <Col
+                xs={4}
+                className="text-center px-4"
+                data-testid="followerCount"
+              >
                 <FontAwesomeIcon icon={faUsers} size="2x" />
                 <p>{abbreviateNumber(info.stats.followerCount)}</p>
               </Col>
-              <Col xs={4} className="text-center px-4">
+              <Col xs={4} className="text-center px-4" data-testid="heartCount">
                 <FontAwesomeIcon icon={faHeart} size="2x" />
                 <p>{abbreviateNumber(info.stats.heartCount)}</p>
               </Col>
-              <Col xs={4} className="text-center px-4">
+              <Col xs={4} className="text-center px-4" data-testid="videoCount">
                 <FontAwesomeIcon icon={faPlay} size="2x" />
                 <p>{abbreviateNumber(info.stats.videoCount)}</p>
               </Col>
