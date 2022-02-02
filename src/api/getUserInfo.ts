@@ -1,4 +1,4 @@
-import apiGet from './base';
+import { apiGet } from './base';
 import { UserProps } from '../domain/user';
 
 export default function getUserInfo(username: string): Promise<UserProps> {

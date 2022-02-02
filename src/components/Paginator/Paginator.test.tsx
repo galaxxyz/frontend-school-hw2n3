@@ -1,15 +1,15 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { Paginator } from '.';
 
 describe('Paginator', () => {
-  test('renders Paginator component', () => {
-    const postsPerPage = 4;
-    const totalPosts = 10;
-    let currentPage = 1;
-    const paginate = (n: number) => {
-      currentPage = n;
-    };
+  const postsPerPage = 4;
+  const totalPosts = 10;
+  let currentPage = 1;
+  const paginate = (n: number) => {
+    currentPage = n;
+  };
 
+  test('renders Paginator component', () => {
     render(
       <Paginator
         postsPerPage={postsPerPage}
@@ -26,13 +26,6 @@ describe('Paginator', () => {
   });
 
   test('changes curent page', () => {
-    const postsPerPage = 4;
-    const totalPosts = 10;
-    let currentPage = 1;
-    const paginate = (n: number) => {
-      currentPage = n;
-    };
-
     const { rerender } = render(
       <Paginator
         postsPerPage={postsPerPage}
@@ -46,7 +39,7 @@ describe('Paginator', () => {
     ).toMatch(/active/);
     screen.debug();
 
-    paginate(2);
+    fireEvent.click(screen.getByText(/2/));
     rerender(
       <Paginator
         postsPerPage={postsPerPage}

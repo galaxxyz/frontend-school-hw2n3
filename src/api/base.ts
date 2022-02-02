@@ -8,6 +8,8 @@ const apiInstance = axios.create({
   },
 });
 
-export default function apiGet(url: string) {
+export function apiGet(url: string) {
   return apiInstance.get(url);
 }
+
+export { apiInstance };

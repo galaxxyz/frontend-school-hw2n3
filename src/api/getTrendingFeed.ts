@@ -1,4 +1,4 @@
-import apiGet from './base';
+import { apiGet } from './base';
 import { PostProps } from '../domain/post';
 
 export default function getTrendingFeed(): Promise<PostProps[]> {
