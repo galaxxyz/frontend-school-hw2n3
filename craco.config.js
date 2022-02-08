@@ -1,5 +1,7 @@
-const CracoEsbuildPlugin = require('craco-esbuild');
 const { ProvidePlugin } = require('webpack');
+const CracoEsbuildPlugin = require('craco-esbuild');
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   webpack: {
@@ -7,24 +9,23 @@ module.exports = {
       new ProvidePlugin({
         React: 'react',
       }),
+      new BundleAnalyzerPlugin({ analyzerMode: 'server' }),
     ],
   },
   plugins: [
     {
       plugin: CracoEsbuildPlugin,
       options: {
-        includePaths: ['/external/dir/with/components'], // Optional. If you want to include components which are not in src folder
+        includePaths: ['/external/dir/with/components'],
         esbuildLoaderOptions: {
-          // Optional. Defaults to auto-detect loader.
-          loader: 'tsx', // Set the value to 'tsx' if you use typescript
+          loader: 'tsx',
           target: 'es2015',
         },
         esbuildMinimizerOptions: {
-          // Optional. Defaults to:
           target: 'es2015',
-          css: true, // if true, OptimizeCssAssetsWebpackPlugin will also be replaced by esbuild.
+          css: true,
         },
-        skipEsbuildJest: false, // Optional. Set to true if you want to use babel for jest tests,
+        skipEsbuildJest: false,
         esbuildJestOptions: {
           loaders: {
             '.ts': 'ts',
