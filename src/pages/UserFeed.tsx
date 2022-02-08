@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Loader, ErrorMessage, PostPreview, Paginator } from '../components';
+import { Loader, ErrorMessage } from '@galaxxyz/my-test-component-library';
+import { PostPreview, Paginator } from '../components';
 import getUserFeed from '../api/getUserFeed';
 import { PostProps } from '../domain/post';
 

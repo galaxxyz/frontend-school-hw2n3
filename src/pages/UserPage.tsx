@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Loader, ErrorMessage } from '@galaxxyz/my-test-component-library';
 import info from '../assets/user-info.json';
 import getUserInfo from '../api/getUserInfo';
 import { UserProps } from '../domain/user';
-import { UserInfo, Loader, ErrorMessage } from '../components';
+import { UserInfo } from '../components';
 import UserFeed from './UserFeed';
 
 const initialInfoState: UserProps = {

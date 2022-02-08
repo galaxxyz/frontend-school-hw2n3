@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
+import { Loader, ErrorMessage } from '@galaxxyz/my-test-component-library';
 import getTrendingFeed from '../api/getTrendingFeed';
 import { PostProps } from '../domain/post';
-import { Post, Loader, ErrorMessage } from '../components';
+import { Post } from '../components';
 
 export default function TrendingFeed() {
   const [trendingPosts, setTrendingPosts] = useState<PostProps[]>([]);
