@@ -6,6 +6,9 @@ export default function getUserFeed(username: string): Promise<PostProps[]> {
     if (typeof resp.data === 'string' || resp.data instanceof String) {
       throw new Error(`${resp.data}`);
     }
+    if (!Array.isArray(resp.data)) {
+      throw new Error('Server responded with invalid data');
+    }
     return resp.data;
   });
 }
