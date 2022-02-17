@@ -6,7 +6,7 @@ import styles from './PostAuthor.module.css';
 export function PostAuthor({ author }: { author: PostAuthorProps }) {
   return (
     <Container className="px-0 pb-3">
-      <Link className={styles.authorLink} to={`/tiktuk/${author.uniqueId}`}>
+      <Link className={styles.authorLink} to={`/${author.uniqueId}`}>
         <Row>
           <Col xs="auto">
             <Image

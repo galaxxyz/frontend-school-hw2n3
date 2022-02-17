@@ -6,7 +6,7 @@ export function Navigation() {
   return (
     <Navbar bg="dark" variant="dark" fixed="top">
       <Container>
-        <Navbar.Brand as={Link} to="/tiktuk/">
+        <Navbar.Brand as={Link} to="/">
           <img
             src={logo}
             alt="tiktuk logo"
@@ -17,7 +17,7 @@ export function Navigation() {
           TikTuk
         </Navbar.Brand>
         <Nav className="m-auto py-1">
-          <Nav.Link as={Link} to="/tiktuk/">
+          <Nav.Link as={Link} to="/">
             Trending
           </Nav.Link>
         </Nav>
