@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/frontend-school-hw2n3/tiktuk/static/css/main.d2271d66.css",
-    "main.js": "/frontend-school-hw2n3/tiktuk/static/js/main.5e583ab7.js",
-    "static/media/logo.svg": "/frontend-school-hw2n3/tiktuk/static/media/logo.3373b4678e95eec5688cb5739c9131bb.svg",
-    "index.html": "/frontend-school-hw2n3/tiktuk/index.html",
-    "main.d2271d66.css.map": "/frontend-school-hw2n3/tiktuk/static/css/main.d2271d66.css.map",
-    "main.5e583ab7.js.map": "/frontend-school-hw2n3/tiktuk/static/js/main.5e583ab7.js.map"
+    "main.css": "/frontend-school-hw2n3/static/css/main.d2271d66.css",
+    "main.js": "/frontend-school-hw2n3/static/js/main.b8b26d3e.js",
+    "static/media/logo.svg": "/frontend-school-hw2n3/static/media/logo.3373b4678e95eec5688cb5739c9131bb.svg",
+    "index.html": "/frontend-school-hw2n3/index.html",
+    "main.d2271d66.css.map": "/frontend-school-hw2n3/static/css/main.d2271d66.css.map",
+    "main.b8b26d3e.js.map": "/frontend-school-hw2n3/static/js/main.b8b26d3e.js.map"
   },
   "entrypoints": [
     "static/css/main.d2271d66.css",
-    "static/js/main.5e583ab7.js"
+    "static/js/main.b8b26d3e.js"
   ]
 }
